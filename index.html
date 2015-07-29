@@ -1,0 +1,110 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDo</title>
+        <!-- <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>ToDo</h1>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div id="allTasks" cateid="-1" class="list-title all-tasks active" onclick="clickCate(this)">
+                    All tasks (<span>7</span>)
+                </div>
+                <div class="list-title">Category List</div>
+                <div id="listcontent" class="list">
+                    <ul>
+                        <li>
+                            <h2 class="active"><i class="fa fa-folder-open"></i><span>Baidu IFE project</span> (2)<i class="fa fa-trash-o"></i>
+                            </h2>
+                            <ul>
+                                <li>
+                                    <h3><i class="fa fa-file-o"></i><span>task1</span> (2)<i class="fa fa-trash-o"></i></h3>
+                                </li>
+                                <li>
+                                    <h3 class="active"><i class="fa fa-file-o"></i><span>task2</span> (2)<i class="fa fa-trash-o"></i></h3>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><h2><i class="fa fa-folder-open"></i><span>Default Category</span> (0)<i class="fa fa-trash-o"></i></h2></li>
+                    </ul>
+                </div>
+                <button class="add" onclick="clickAddCate()"><i class="fa fa-plus"></i>Add Category</button>
+            </div>
+            <div class="mid">
+                <div class="status">
+                    <button id="all-tasks" class="active">All</button>
+                    <button id="unfinish-tasks">Incomplete</button>
+                    <button id="finished-tasks">Completed</button>
+                </div>
+                <div id="task-list" class="task-list">
+                    <div>2015-06-05</div>
+                    <ul>
+                        <li taskid="1" class="active">todo-1</li>
+                        <li taskid="2">todo-2</li>
+                    </ul>
+                    <div>2015-06-05</div>
+                    <ul>
+                        <li>todo-1</li>
+                        <li>todo-2</li>
+                    </ul>
+                </div>
+                <button class="add-task add" onclick="clickAddTask()"><i class="fa fa-plus"></i>New Task</button>
+            </div>
+            <div class="right">
+                <div class="title">
+                    <div class="todo-name">todo-1</div>
+                    <div class="manipulate">
+                        <a><i class="fa fa-check-square-o"></i></a>
+                        <a><i class="fa fa-pencil-square-o"></i></a>
+                    </div>
+                </div>
+                <div class="task-date">
+                    The task:<span>2015-06-05</span>
+                </div>
+                <div class="content">
+                    finish task 3Ah ah ah ah ah this is a fake
+                </div>
+                <!--  <div class="title">
+                    <div class="todo-name"><input type="text" class="input-title" placeholder="Please enter a title"></div>
+                    <div class="manipulate"></div>
+                </div>
+                <div class="task-date">
+                    The task:<span><input type="date" class="input-date"></span>
+                </div>
+                <div class="content">
+                    <textarea class="textarea-content" placeholder="Please enter the task content"></textarea>
+                </div> -->
+                <div class="button-area">
+                    <!-- <span class="info"></span>
+                    <button class="save">Save</button>
+                    <button class="cancel-save">Give Up</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="cover">
+            <div class="modal">
+                <div class="modal-head">
+                    Add Category
+                </div>
+                <div class="modal-body">
+                    Select Main Category:<select id="modal-select">
+                        <option value="volvo">Volvo</option>
+                    </select><br>
+                    New Category Name: <input id="newCateName" type="text">
+                </div>
+                <div class="modal-foot">
+                    <button onclick="cancel()">Cancel</button>
+                    <button onclick="ok()">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/util.js"></script>
+        <script src="js/todo.js"></script>
+    </body>
+</html>
